@@ -40,15 +40,15 @@ class App extends Component {
     return (
       <div>
           <Navbar color="inverse" light expand="md">
-              <NavbarBrand href="/">reactstrap</NavbarBrand>
+              <NavbarBrand href="/">WP Dispensary</NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                   <Nav className="ml-auto" navbar>
                       <NavItem>
-                          <NavLink href="/components/">Components</NavLink>
+                          <NavLink href="https://www.wpdispensary.com/">Website</NavLink>
                       </NavItem>
                       <NavItem>
-                          <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
+                          <NavLink href="https://github.com/robertdevore/wpd-react">Github</NavLink>
                       </NavItem>
                   </Nav>
               </Collapse>
