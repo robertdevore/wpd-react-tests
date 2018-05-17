@@ -3,3 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.wpd-react-card-class-name.card {
+    margin-bottom: 24px;
+}
