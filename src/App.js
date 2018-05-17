@@ -40,7 +40,7 @@ class App extends Component {
     return (
       <div>
         <Navbar color="inverse" light expand="md">
-          <NavbarBrand href="/">WP Dispensary</NavbarBrand>
+          <NavbarBrand href="/"><strong>WP Dispensary</strong> Flowers</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -55,11 +55,6 @@ class App extends Component {
         </Navbar>
         <Jumbotron>
           <Container>
-            <Row>
-              <Col>
-                <h1>WPD REST API - TEST</h1>
-              </Col>
-            </Row>
             <Row>
               {this.state.products.map((product) =>
                 <Col sm="4">
