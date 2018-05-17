@@ -27,7 +27,7 @@ class App extends Component {
     this.toggle = this.toggle.bind(this);
     this.state = {
       products: [],
-      dataRoute: 'https://www.wpdispensary.com/demo/wp-json/wp/v2/flowers',
+      dataRoute: 'https://www.wpdispensary.com/demo/wp-json/wp/v2/flowers?per_page=100',
       isOpen: false
     }
   }
