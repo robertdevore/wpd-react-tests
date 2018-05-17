@@ -39,64 +39,54 @@ class App extends Component {
   render() {
     return (
       <div>
-          <Navbar color="inverse" light expand="md">
-              <NavbarBrand href="/">WP Dispensary</NavbarBrand>
-              <NavbarToggler onClick={this.toggle} />
-              <Collapse isOpen={this.state.isOpen} navbar>
-                  <Nav className="ml-auto" navbar>
-                      <NavItem>
-                          <NavLink href="https://www.wpdispensary.com/">Website</NavLink>
-                      </NavItem>
-                      <NavItem>
-                          <NavLink href="https://github.com/robertdevore/wpd-react">Github</NavLink>
-                      </NavItem>
-                  </Nav>
-              </Collapse>
-          </Navbar>
-          <Jumbotron>
-              <Container>
-                  <Row>
-                      <Col>
-                          <h1>WPD REST API - TEST</h1>
-                          <p>
-                              <Button
-                                  tag="a"
-                                  color="success"
-                                  size="large"
-                                  href="http://www.wpdispensary.com"
-                                  target="_blank"
-                              >
-                                  Go to WP Dispensary
-                              </Button>
-                          </p>
-                      </Col>
-                  </Row>
-                  <Row>
-                    {this.state.products.map((product) =>
-                      <Col sm="4">
-                      <Card>
-                        <CardImg top width="100%" src={ product.image } alt="Card image cap" />
-                        <CardBody>
-                          <CardTitle>{ product.name }</CardTitle>
-                          <CardSubtitle>Card subtitle</CardSubtitle>
-                          <CardText><strong>1g:</strong> { product.gram }</CardText>
-                          <Button
-                            data-item-name={ product.name }
-                            data-item-id={ product.id }
-                            data-item-image={ product.image }
-                            data-item-description={ product.description }
-                            data-item-url= { product.link }
-                            data-item-price={ product.gram }>
-                            Buy Now
-                          </Button>
-                        </CardBody>
-                      </Card>
-                      </Col>
-                    )}
-                  </Row>
-
-              </Container>
-          </Jumbotron>
+        <Navbar color="inverse" light expand="md">
+          <NavbarBrand href="/">WP Dispensary</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="https://www.wpdispensary.com/">Website</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="https://github.com/robertdevore/wpd-react">Github</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+        <Jumbotron>
+          <Container>
+            <Row>
+              <Col>
+                <h1>WPD REST API - TEST</h1>
+              </Col>
+            </Row>
+            <Row>
+              {this.state.products.map((product) =>
+                <Col sm="4">
+                <Card className="wpd-react-card-class-name">
+                  <a href={ product.link }><CardImg top width="100%" src={ product.image } alt="Card image cap" /></a>
+                  <CardBody>
+                    <CardTitle>{ product.name }</CardTitle>
+                    <CardSubtitle>Card subtitle</CardSubtitle>
+                    <CardText><strong>1g:</strong> { product.gram }</CardText>
+                    <Button
+                      data-item-name={ product.name }
+                      data-item-id={ product.id }
+                      data-item-image={ product.image }
+                      data-item-description={ product.description }
+                      data-item-url= { product.link }
+                      data-item-price={ product.gram }
+                      color="primary" size="lg" block
+                    >
+                      Buy Now
+                    </Button>
+                  </CardBody>
+                </Card>
+                </Col>
+              )}
+            </Row>
+          </Container>
+        </Jumbotron>
       </div>
     );
   }
