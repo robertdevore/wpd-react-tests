@@ -57,16 +57,16 @@ class App extends Component {
               <Container>
                   <Row>
                       <Col>
-                          <h1>Welcome to React</h1>
+                          <h1>WPD REST API - TEST</h1>
                           <p>
                               <Button
                                   tag="a"
                                   color="success"
                                   size="large"
-                                  href="http://reactstrap.github.io"
+                                  href="http://www.wpdispensary.com"
                                   target="_blank"
                               >
-                                  View Reactstrap Docs
+                                  Go to WP Dispensary
                               </Button>
                           </p>
                       </Col>
