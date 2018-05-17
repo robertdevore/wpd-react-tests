@@ -17,6 +17,10 @@ import {
     CardBody,
     CardTitle,
     CardSubtitle,
+    Modal,
+    ModalHeader,
+    ModalBody,
+    ModalFooter,
     Button
 } from 'reactstrap';
 
