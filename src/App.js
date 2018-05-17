@@ -62,17 +62,9 @@ class App extends Component {
                   <a href={ product.link }><CardImg top width="100%" src={ product.image } alt="Card image cap" /></a>
                   <CardBody>
                     <CardTitle>{ product.name }</CardTitle>
-                    <CardSubtitle>Card subtitle</CardSubtitle>
+                    <CardSubtitle>{ product.category }</CardSubtitle>
                     <CardText><strong>1g:</strong> { product.gram }</CardText>
-                    <Button
-                      data-item-name={ product.name }
-                      data-item-id={ product.id }
-                      data-item-image={ product.image }
-                      data-item-description={ product.description }
-                      data-item-url= { product.link }
-                      data-item-price={ product.gram }
-                      color="primary" size="lg" block
-                    >
+                    <Button color="primary" size="lg" block>
                       Buy Now
                     </Button>
                   </CardBody>
@@ -102,6 +94,7 @@ class App extends Component {
       link: product.link,
       image: product.featured_image_url,
       name: product.title.rendered,
+      category: product.flowers_category,
       description: product.description
     }
   }
