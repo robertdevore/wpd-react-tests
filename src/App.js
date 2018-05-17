@@ -72,28 +72,27 @@ class App extends Component {
                       </Col>
                   </Row>
                   <Row>
-                    <Col>
                     {this.state.products.map((product) =>
-                      <div className="product" key={`product-${product.id}}`}>
-
-                        <a href={ product.link }><img src={ product.image } alt={ product.name } className="product-image"/></a>
-                        <p><a href={ product.link }>{ product.name }</a></p>
-                        <p><strong>1g:</strong> { product.gram } </p>
-                        <p><strong>3.5g:</strong> { product.eighth } </p>
-
-                        <button className="snipcart-add-item"
-                          data-item-name={ product.name }
-                          data-item-id={ product.id }
-                          data-item-image={ product.image }
-                          data-item-description={ product.description }
-                          data-item-url= { `${this.state.dataRoute}/${product.id}`}
-                          data-item-price={ product.price }>
-                          Buy it for { product.price } $
-                        </button>
-
-                      </div>
+                      <Col sm="4">
+                      <Card>
+                        <CardImg top width="100%" src={ product.image } alt="Card image cap" />
+                        <CardBody>
+                          <CardTitle>{ product.name }</CardTitle>
+                          <CardSubtitle>Card subtitle</CardSubtitle>
+                          <CardText><strong>1g:</strong> { product.gram }</CardText>
+                          <Button
+                            data-item-name={ product.name }
+                            data-item-id={ product.id }
+                            data-item-image={ product.image }
+                            data-item-description={ product.description }
+                            data-item-url= { product.link }
+                            data-item-price={ product.gram }>
+                            Buy Now
+                          </Button>
+                        </CardBody>
+                      </Card>
+                      </Col>
                     )}
-                    </Col>
                   </Row>
 
               </Container>
