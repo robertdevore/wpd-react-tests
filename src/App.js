@@ -11,6 +11,12 @@ import {
     Row,
     Col,
     Jumbotron,
+    Card,
+    CardImg,
+    CardText,
+    CardBody,
+    CardTitle,
+    CardSubtitle,
     Button
 } from 'reactstrap';
 
