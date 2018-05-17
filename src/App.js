@@ -64,7 +64,7 @@ class App extends Component {
                     <CardTitle>{ product.name }</CardTitle>
                     <CardSubtitle>{ product.category }</CardSubtitle>
                     <CardText><strong>1g:</strong> ${ product.gram }</CardText>
-                    <Button color="primary" size="lg" block>
+                    <Button color="success" size="lg" block>
                       Buy Now
                     </Button>
                   </CardBody>
