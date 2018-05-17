@@ -63,7 +63,7 @@ class App extends Component {
                   <CardBody>
                     <CardTitle>{ product.name }</CardTitle>
                     <CardSubtitle>{ product.category }</CardSubtitle>
-                    <CardText><strong>1g:</strong> { product.gram }</CardText>
+                    <CardText><strong>1g:</strong> ${ product.gram }</CardText>
                     <Button color="primary" size="lg" block>
                       Buy Now
                     </Button>
