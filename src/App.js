@@ -63,7 +63,13 @@ class App extends Component {
                   <CardBody>
                     <CardTitle>{ product.name }</CardTitle>
                     <CardSubtitle>{ product.category }</CardSubtitle>
-                    <CardText><strong>1g:</strong> ${ product.gram }</CardText>
+                    <CardText>
+                      <strong>1g:</strong> ${ product.gram }
+                      <strong>3.5g:</strong> ${ product.eighth }
+                      <strong>7g:</strong> ${ product.quarter }
+                      <strong>14g:</strong> ${ product.half }
+                      <strong>28g:</strong> ${ product.ounce }
+                    </CardText>
                     <Button color="success" size="lg" block>
                       Buy Now
                     </Button>
@@ -91,6 +97,9 @@ class App extends Component {
       id: product.id,
       gram: product._gram,
       eighth: product._eighth,
+      quarter: product._quarter,
+      half: product._half,
+      ounce: product._ounce,
       link: product.link,
       image: product.featured_image_url,
       name: product.title.rendered,
