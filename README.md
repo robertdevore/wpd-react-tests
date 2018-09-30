@@ -1,3 +1,3 @@
 # WP Dispensary React
 
-**NOT STABLE** This is not ready for production, yet.
+**Updated: 09-30-18** This is not ready for production yet.
